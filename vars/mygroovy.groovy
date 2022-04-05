@@ -40,8 +40,7 @@ def call()
                              }
                              println ar.getClass()
 
-                             def sc = new Scanner(System.in);
-                             def str=sc.nextLine()
+                        //    coming from parameters
                              println "hello ${str}"
 
 
