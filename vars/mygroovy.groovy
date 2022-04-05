@@ -70,7 +70,7 @@ def call()
                    sh "chmod +777 xyz.txt"
                    sh "ls -la"
                    sh "pwd"
-                   def wf = new FileWriter("./xyz.txt")
+                   def wf = new FileWriter("/var/lib/jenkins/workspace/test-jsl-pipeline/xyz.txt")
                    wf.write("hii hello ..... ")
                    wf.close() 
                }
