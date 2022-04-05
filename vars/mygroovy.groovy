@@ -2,6 +2,7 @@
 import com.files.Test;
 import trackfone.devops.Build
 import trackfone.devops.Test2
+import java.util.*;
 
 def call()
 {
@@ -22,6 +23,22 @@ def call()
                {
                    def c = new Test2()
                    println c.sayBye("arihant")
+               }
+               stage('DSA')
+               {
+                   def ar = new ArrayList<>();
+
+                         ar.add(5);
+                         ar.add(10);
+                         ar.add(7);
+                         ar.add(9);
+                         ar.add(["hii","bye"]);
+
+                       for (ele in ar) {
+                                 println ele
+    
+                             }
+
                }
         }
 
