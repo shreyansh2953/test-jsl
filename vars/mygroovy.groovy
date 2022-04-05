@@ -43,10 +43,10 @@ def call()
 
                         //    coming from Jenkins parameters
                              println "hello ${str}"
-                       def myjson = '{"name":"shreyansh","age":"22"}'
+                       def myjson = '{"name":"shreyansh","age":"22","value":{"output":"ok"}}'
                          def slurper = new  JsonSlurperClassic().parseText(myjson)
 
-                         println slurper.age
+                         println slurper.value.output
                          println slurper.getClass()
                              def jsonSlurper = new JsonSlurperClassic()
                         Object lst = jsonSlurper.parseText('{}')
