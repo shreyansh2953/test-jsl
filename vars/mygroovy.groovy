@@ -46,13 +46,13 @@ def call()
 
 
                             //  playing with json in jenkins
-                       def myjson = '{"name":"shreyansh","age":"22","value":{"output":"ok"}}'
+                         def myjson = '{"name":"shreyansh","age":"22","value":{"output":"ok"}}'
                          def slurper = new  JsonSlurperClassic().parseText(myjson)
                          println slurper.value.output
                          println slurper.getClass()
 
 
-                             def jsonSlurper = new JsonSlurperClassic()
+                        def jsonSlurper = new JsonSlurperClassic()
                         Object lst = jsonSlurper.parseText('{}')
                          lst.name = "shreyansh"
                         print lst
