@@ -67,9 +67,7 @@ def call()
                {
                    deleteDir()
                    sh "touch xyz.txt"
-                //    sh "chmod +777 xyz.txt"
-                   sh "ls -la"
-                   sh "pwd"
+                
                    def wf = new FileWriter("/var/lib/jenkins/workspace/test-jsl-pipeline/xyz.txt")
                    wf.write("hii hello ..... ")
                    wf.close() 
