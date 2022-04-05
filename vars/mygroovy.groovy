@@ -69,7 +69,7 @@ def call()
                    sh "touch xyz.txt"
                    sh "chmod +777 xyz.txt"
                    sh "ls -la"
-                   FileWriter wf = new FileWriter("./xyz.txt")
+                   FileWriter wf = new FileWriter("xyz.txt")
                    wf.write("hii hello ..... ")
                    wf.close() 
                }
