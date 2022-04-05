@@ -1,5 +1,5 @@
 
-import src.com.files.Test;
+import com.files.Test;
 
 def call()
 {
