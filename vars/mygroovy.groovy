@@ -62,6 +62,15 @@ def call()
                        
 
                }
+
+               stage('file')
+               {
+                   deleteDir()
+                   sh "touch xyz.txt"
+                   FileWriter wf = new FileWriter("./xyz.txt")
+                   wf.write("hii hello ..... ")
+                   wf.close() 
+               }
         }
 
    }
