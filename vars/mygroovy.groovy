@@ -67,6 +67,8 @@ def call()
                {
                    deleteDir()
                    sh "touch xyz.txt"
+
+                //    using predefined env variables
                 
                    def wf = new FileWriter("/var/lib/jenkins/workspace/${JOB_NAME}/xyz.txt")
                    wf.write("hii hello ..... ")
