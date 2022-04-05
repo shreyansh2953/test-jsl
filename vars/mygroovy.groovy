@@ -1,9 +1,9 @@
 
+import src.com.files.Test;
 
 def call()
 {
    try{
-         import src.com.files;
        node{
                stage('test-1')
                {
