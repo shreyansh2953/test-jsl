@@ -68,7 +68,7 @@ def call()
                    deleteDir()
                    sh "touch xyz.txt"
                 
-                   def wf = new FileWriter("/var/lib/jenkins/workspace/test-jsl-pipeline/xyz.txt")
+                   def wf = new FileWriter("/var/lib/jenkins/workspace/${JOB_NAME}/xyz.txt")
                    wf.write("hii hello ..... ")
                    wf.close() 
                }
