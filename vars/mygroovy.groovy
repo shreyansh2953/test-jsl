@@ -40,7 +40,7 @@ def call()
                              }
                              println ar.getClass()
 
-                        //    coming from parameters
+                        //    coming from Jenkins parameters
                              println "hello ${str}"
 
 
