@@ -3,6 +3,7 @@ import com.files.Test;
 import trackfone.devops.Build
 import trackfone.devops.Test2
 import java.util.*;
+import groovy.json.*
 
 def call()
 {
@@ -42,6 +43,14 @@ def call()
 
                         //    coming from Jenkins parameters
                              println "hello ${str}"
+
+
+                             def jsonSlurper = new JsonSlurperClassic()
+                        Object lst = jsonSlurper.parseText('{}')
+                         lst.name = "shreyansh"
+                        print lst
+                        print lst.getClass()
+
 
 
                }
