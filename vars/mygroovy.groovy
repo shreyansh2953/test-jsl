@@ -36,8 +36,9 @@ def call()
 
                        for (ele in ar) {
                                  println ele
-    
+                           
                              }
+                             println ar.getClass()
 
                }
         }
