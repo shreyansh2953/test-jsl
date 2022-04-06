@@ -4,11 +4,19 @@ import trackfone.devops.Build
 import trackfone.devops.Test2
 import java.util.*;
 import groovy.json.*
+import mytrackfone.devops.core.cleanup;
+import mytrackfone.devops.core.checkout;
 
 def call()
 {
    try{
        node{
+
+               stage('checkout')
+               {
+                   def ch = new checkout()
+                   ch.git_Checkout("https://github.com/shreyansh2953/core-jsl.git","master")
+               }
                stage('test-1')
                {
                   def t = new Test();
