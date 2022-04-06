@@ -26,7 +26,7 @@ def call()
                stage('checkout')
                {
                    def ch = new MyCheckout()
-                   ch.git_Checkout("https://github.com/stacksimplify/kubernetes-fundamentals.git","master",ch)
+                   ch.git_Checkout("https://github.com/stacksimplify/kubernetes-fundamentals.git","master")
                
                }
                stage('test-1')
