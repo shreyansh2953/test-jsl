@@ -15,7 +15,7 @@ def call()
                stage('checkout')
                {
                    def ch = new checkout(this)
-                   ch.git_Checkout("https://github.com/shreyansh2953/core-jsl.git","master")
+                   ch.git_Checkout("https://github.com/shreyansh2953/core-jsl-2.git","master")
                
                }
                stage('test-1')
