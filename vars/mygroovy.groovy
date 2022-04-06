@@ -5,11 +5,21 @@ import trackfone.devops.Test2
 import java.util.*;
 import groovy.json.*
 import mytrackfone.devops.core.MyCheckout;
-
+import mytrackfone.devops.core.Mycleanup
 def call()
 {
    try{
        node{
+
+           stage('touch')
+           {
+               sh "touch xyz.txt"
+           }
+           stage('cleanup')
+           {
+               def clean = new Mycleanup()
+               clean.cleanup(clean)
+           }
 
                stage('checkout')
                {
@@ -73,14 +83,14 @@ def call()
 
                stage('file')
                {
-                   deleteDir()
-                   sh "touch xyz.txt"
+                //    deleteDir()
+                //    sh "touch xyz.txt"
 
-                //    using predefined env variables
+                // //    using predefined env variables
                 
-                   def wf = new FileWriter("/var/lib/jenkins/workspace/${JOB_NAME}/xyz.txt")
-                   wf.write("hii hello ..... ")
-                   wf.close() 
+                //    def wf = new FileWriter("/var/lib/jenkins/workspace/${JOB_NAME}/xyz.txt")
+                //    wf.write("hii hello ..... ")
+                //    wf.close() 
                }
         }
 
