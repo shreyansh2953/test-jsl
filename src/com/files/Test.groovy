@@ -4,7 +4,7 @@ package com.files
     // Static String place = "Delhi"
   def sayHii(name)
   {
-      return "hii ${name}"
+      return "hii ${name} heheh"
   }
 
 // }
