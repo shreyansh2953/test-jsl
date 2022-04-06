@@ -6,6 +6,7 @@ import java.util.*;
 import groovy.json.*
 import mytrackfone.devops.core.MyCheckout;
 import mytrackfone.devops.core.Mycleanup
+
 def call()
 {
    try{
@@ -18,6 +19,7 @@ def call()
            stage('cleanup')
            {
                def clean = new Mycleanup()
+            //    passing the refrence (clean) so that our method in pacakge can execute Jenkins pipeline methods
                clean.cleanup(clean)
            }
 
@@ -84,13 +86,13 @@ def call()
                stage('file')
                {
                 //    deleteDir()
-                //    sh "touch xyz.txt"
+                   sh "touch xyz.txt"
 
-                // //    using predefined env variables
+                //    using predefined env variables
                 
-                //    def wf = new FileWriter("/var/lib/jenkins/workspace/${JOB_NAME}/xyz.txt")
-                //    wf.write("hii hello ..... ")
-                //    wf.close() 
+                   def wf = new FileWriter("/var/lib/jenkins/workspace/${JOB_NAME}/xyz.txt")
+                   wf.write("hii hello ..... ")
+                   wf.close() 
                }
         }
 
