@@ -20,7 +20,7 @@ def call()
            {
                def clean = new Mycleanup()
             //    passing the refrence (clean) so that our method in pacakge can execute Jenkins pipeline methods
-               clean.cleanup(clean)
+               clean.cleanup()
            }
 
                stage('checkout')
