@@ -1,6 +1,6 @@
 #!/usr/bin/groovy
 
 
-void Print(String message) {
+static void Print(String message) {
      echo "[INFO]  :: ${message}"
 }
